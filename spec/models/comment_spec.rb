@@ -5,6 +5,7 @@ RSpec.describe Comment, type: :model do
   let(:comment) { Comment.create!(body: "Comment Body", post: post) }
 
   describe "attributes" do
+    
     it "should respond to body" do
       expect(comment).to respond_to(:body)
     end
