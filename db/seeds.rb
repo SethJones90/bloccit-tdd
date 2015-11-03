@@ -1,5 +1,15 @@
 include RandomData
 
+#Create Unique Post
+1.times do
+  Post.find_or_create_by!(
+
+  title: "Unique Post Title",
+  body: "Unique Post Body"
+  )
+end
+
+
 #Create Posts
 50.times do
   Post.create!(
