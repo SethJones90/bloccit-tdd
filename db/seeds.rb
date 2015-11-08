@@ -9,6 +9,18 @@ include RandomData
   )
 end
 
+#Create Advertisements
+50.times do
+  Advertisement.create!(
+
+    title: RandomData.random_sentence,
+    copy:  RandomData.random_paragraph,
+    price: '1'
+  )
+end
+advertisements = Advertisement.all
+
+
 
 #Create Posts
 50.times do
@@ -29,5 +41,6 @@ posts = Post.all
 end
 
 puts "Seeds finished"
+puts "#{Advertisement.count} advertisements created!"
 puts "#{Post.count} posts created!"
 puts "#{Comment.count} comments created!"
