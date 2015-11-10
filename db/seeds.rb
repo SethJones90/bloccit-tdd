@@ -21,6 +21,17 @@ end
 advertisements = Advertisement.all
 
 
+#Create Questions
+50.times do
+  Question.create!(
+
+    title: RandomData.random_sentence,
+    body:  RandomData.random_paragraph,
+    resolved: 'true'
+  )
+end
+questions = Question.all
+
 
 #Create Posts
 50.times do
@@ -42,5 +53,6 @@ end
 
 puts "Seeds finished"
 puts "#{Advertisement.count} advertisements created!"
+puts "#{Question.count} questions created!"
 puts "#{Post.count} posts created!"
 puts "#{Comment.count} comments created!"
